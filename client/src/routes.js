@@ -7,18 +7,45 @@ import {
 } from "react-router-dom";
 import { 
   AdminDashboard,
-  Login
+  Bills,
+  Contacts,
+  Invoices,
+  Items,
+  Package,
+  Purchase,
+  Sales
 } from "./pages";
 
 const MainRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact strict path="/">
+        <Route exact strict path="/admin">
           <AdminDashboard />
         </Route>
-        <Route exact strict path="/login">
-          <Login />
+        <Route exact strict path="/admin/dashboard">
+          <AdminDashboard />
+        </Route>
+        <Route exact strict path="/admin/contacts">
+          <Contacts />
+        </Route>
+        <Route exact strict path="/items">
+          <Items />
+        </Route>
+        <Route exact strict path="/admin/salesorders">
+          <Sales />
+        </Route>
+        <Route exact strict path="/admin/package">
+          <Package />
+        </Route>
+        <Route exact strict path="/admin/invoces">
+          <Invoices />
+        </Route>
+        <Route exact strict path="/admin/purchaseorders">
+          <Purchase />
+        </Route>
+        <Route exact strict path="/admin/bills">
+          <Bills />
         </Route>
       </Switch>
     </Router>
